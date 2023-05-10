@@ -2,8 +2,8 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id("com.datadoghq.dd-sdk-android-gradle-plugin")
-    id("maven-publish")
 }
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.lolay.android.tracker'
@@ -40,7 +40,7 @@ project.afterEvaluate {
             library(MavenPublication) {
                 groupId = 'com.lolay.android'
                 artifactId = 'investigo-kotlin'
-                version = '1.0.5'
+                version = '0.1.0-SNAPSHOT'
                 artifact bundleReleaseAar
             }
         }
