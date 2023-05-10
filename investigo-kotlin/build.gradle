@@ -34,16 +34,13 @@ android {
     }
 }
 
-group = 'com.lolay.android'
-version = '1.0'
-
 project.afterEvaluate {
     publishing {
         publications {
             library(MavenPublication) {
                 groupId = 'com.lolay.android'
-                artifactId = 'investigo'
-                version = '1.0'
+                artifactId = 'investigo-kotlin'
+                version = '1.0.5'
                 artifact bundleReleaseAar
             }
         }
